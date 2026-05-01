@@ -60,7 +60,7 @@ NUMBERGUESSINGGAME/
 
 Before running the project:
 
-* Java JDK 8 or higher
+* Java JDK 1.8 or higher
 * JavaFX SDK
 * NetBeans (optional but recommended)
 
@@ -71,7 +71,7 @@ Before running the project:
 1. Clone the repository:
 
 ```
-git clone https://github.com/your-username/number-guessing-game.git
+git clone https://github.com/osama-obaid/number-guessing-game.git
 cd number-guessing-game
 ```
 
