@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="571.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NumberGuessingGame.Controller">
+
+    <children>
+      <ImageView fitHeight="664.0" fitWidth="433.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@backGround.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#eaecee" height="218.0" layoutX="79.0" layoutY="300.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="277.0">
+         <effect>
+            <Shadow>
+               <color>
+                  <Color red="0.9947368502616882" green="0.9836841821670532" blue="0.9836841821670532" />
+               </color>
+            </Shadow>
+         </effect>
+      </Rectangle>
+      <Ellipse fill="#f1f5f8" layoutX="214.0" layoutY="90.0" radiusX="193.0" radiusY="50.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+        <Label fx:id="messageLabel" alignment="CENTER" layoutX="14.0" layoutY="50.0" prefHeight="80.0" prefWidth="400.0" style="-fx-font-size: 22px;" text="🕵Guess Number between 1 &amp; 9999 🕵" textAlignment="CENTER" textFill="#0b0492">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+        </Label>
+
+        <TextField fx:id="guessField" alignment="CENTER" layoutX="134.0" layoutY="169.0" prefHeight="53.0" prefWidth="166.0" promptText="Enter The Number Here">
+            <font>
+                <Font size="14.0" />
+            </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <effect>
+            <Blend />
+         </effect>
+        </TextField>
+
+        <Button fx:id="guessButton" layoutX="159.0" layoutY="232.0" prefHeight="41.0" prefWidth="109.0" text="🎯 Guess" textAlignment="CENTER" textFill="#112cfb">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.06345029175281525" green="0.9789473414421082" blue="0.6127485632896423" />
+               </color>
+            </DropShadow>
+         </effect>
+        </Button>
+
+        <Button fx:id="retryButton" disable="true" layoutX="135.0" layoutY="457.0" prefHeight="41.0" prefWidth="166.0" text="🔄 Retry Agin" textFill="#cf1f1f">
+            <font>
+                <Font size="18.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <effect>
+                <Blend />
+            </effect>
+        </Button>
+
+        <Label fx:id="attemptsLabel" layoutX="163.0" layoutY="318.0" text="Attempt: 3/0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <Label fx:id="timerLabel" layoutX="110.0" layoutY="371.0" text="⏱ Remaining time: 30 seconds">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+
+        <ProgressBar fx:id="timeProgressBar" layoutX="91.0" layoutY="416.0" prefWidth="250.0" progress="1.0" />
+    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
